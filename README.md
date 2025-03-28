@@ -35,5 +35,6 @@ Ele realiza 13 verificações:
 
 **coep_seguro (Cross-Origin Embedder Policy):** Impede que um documento carregue recursos de outras origens se eles não derem permissão, trabalhando em conjunto com o COOP e CORP para fortalecer o isolamento de segurança.
 
-![image](https://github.com/user-attachments/assets/ad446c7f-3dcd-4a62-bc32-b39f03b80909)
+![image](https://github.com/user-attachments/assets/de4b1a76-1ef3-416c-95f0-27d5e080ebce)
+
 
