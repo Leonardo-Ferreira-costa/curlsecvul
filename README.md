@@ -37,4 +37,6 @@ Ele realiza 13 verificações:
 
 ![image](https://github.com/user-attachments/assets/de4b1a76-1ef3-416c-95f0-27d5e080ebce)
 
+obs.: Se não foi achado configuração para o recurso testado, não quer dizer que o website esteja vulnerável, mais testes devem ser feitos para confirmação.
+O script apenas verifica se tal configuração foi realizada.
 
