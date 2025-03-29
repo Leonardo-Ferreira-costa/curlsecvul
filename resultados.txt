@@ -1,0 +1,228 @@
+================================================================================
+RELATÓRIO DE SEGURANÇA HTTP - MÚLTIPLOS DOMÍNIOS
+Data/Hora: 2025-03-28 21:53:03
+Total de domínios analisados: 3
+================================================================================
+
+ÍNDICE DE DOMÍNIOS ANALISADOS
+----------------------------------------
+1. https://g1.globo.com/
+2. https://flux-control.vercel.app/
+3. https://www.gupy.io
+
+================================================================================
+
+================================================================================
+ANÁLISE DE SEGURANÇA HTTP - https://g1.globo.com/
+Data/Hora: 2025-03-28 21:53:03
+================================================================================
+
+1. CABEÇALHOS HTTP RECEBIDOS
+----------------------------------------
+HTTP/2 200 
+date: Sat, 29 Mar 2025 00:53:03 GMT
+content-type: text/html; charset=UTF-8
+show-page-version: 0
+x-request-id: ac76a6b3-23b5-4b17-a0d6-4f71f623c19d
+x-mobile: desktop
+x-served-from: Router G1 PROD, BS Show Services
+content-security-policy: upgrade-insecure-requests
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+expires: Sat, 29 Mar 2025 00:53:13 GMT
+cache-control: max-age=10
+content-encoding: gzip
+x-location-rule: equal-barra
+age: 0
+vary: X-Forwarded-Proto, User-Agent, Accept-Encoding
+x-bip: 117021001 cmah24lx38ca02.globoi.com
+via: 2.0 CachOS
+accept-ranges: bytes
+x-thanos: 0A823C2B
+
+
+
+2. ANÁLISE DETALHADA DE SEGURANÇA
+----------------------------------------
+[Status HTTP] HTTP/2 200
+► Estado: Inseguro
+
+[Content-Security-Policy]
+► Estado: Seguro (Previne conteúdo misto)
+► Valor: upgrade-insecure-requests
+
+[X-Content-Type-Options]
+► Estado: Seguro (Previne MIME sniffing)
+► Valor: nosniff
+
+[X-XSS-Protection]
+► Estado: Seguro (Proteção XSS ativada)
+► Valor: 1; mode=block
+
+
+3. CABEÇALHOS DE SEGURANÇA NÃO ENCONTRADOS
+----------------------------------------
+▪ Status HTTP (301 Moved Permanently)
+▪ Location (HTTPS)
+▪ Strict-Transport-Security (HSTS)
+▪ Referrer-Policy
+▪ Permissions-Policy
+▪ Clear-Site-Data
+▪ Cross-Origin-Opener-Policy (COOP)
+▪ Cross-Origin-Resource-Policy (CORP)
+▪ Cross-Origin-Embedder-Policy (COEP)
+
+4. PONTUAÇÃO DE SEGURANÇA
+----------------------------------------
+► Pontuação: 3/13 (23.1%)
+► Conclusão: PROTEÇÕES BÁSICAS, COM VULNERABILIDADES
+► Recomendação: Implementar os cabeçalhos de segurança ausentes.
+================================================================================
+
+================================================================================
+ANÁLISE DE SEGURANÇA HTTP - https://flux-control.vercel.app/
+Data/Hora: 2025-03-28 21:53:03
+================================================================================
+
+1. CABEÇALHOS HTTP RECEBIDOS
+----------------------------------------
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 1583827
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline
+content-type: text/html; charset=utf-8
+date: Sat, 29 Mar 2025 00:53:03 GMT
+etag: "c80fcc273d03da6cf204759ab2c73ba2"
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch
+x-matched-path: /
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 4294967294
+x-vercel-cache: HIT
+x-vercel-id: gru1::77sh5-1743209583747-5207553cd5a5
+content-length: 20646
+
+
+
+2. ANÁLISE DETALHADA DE SEGURANÇA
+----------------------------------------
+[Status HTTP] HTTP/2 200
+► Estado: Inseguro
+
+[Strict-Transport-Security (HSTS)]
+► Estado: Parcialmente seguro (Sem proteção de subdomínios)
+► Valor: max-age=63072000; includeSubDomains; preload
+
+
+3. CABEÇALHOS DE SEGURANÇA NÃO ENCONTRADOS
+----------------------------------------
+▪ Status HTTP (301 Moved Permanently)
+▪ Location (HTTPS)
+▪ Content-Security-Policy
+▪ X-XSS-Protection
+▪ X-Content-Type-Options
+▪ Referrer-Policy
+▪ Permissions-Policy
+▪ Clear-Site-Data
+▪ Cross-Origin-Opener-Policy (COOP)
+▪ Cross-Origin-Resource-Policy (CORP)
+▪ Cross-Origin-Embedder-Policy (COEP)
+
+4. PONTUAÇÃO DE SEGURANÇA
+----------------------------------------
+► Pontuação: 1/13 (7.7%)
+► Conclusão: PROTEÇÕES BÁSICAS, COM VULNERABILIDADES
+► Recomendação: Implementar os cabeçalhos de segurança ausentes.
+================================================================================
+
+================================================================================
+ANÁLISE DE SEGURANÇA HTTP - https://www.gupy.io
+Data/Hora: 2025-03-28 21:53:03
+================================================================================
+
+1. CABEÇALHOS HTTP RECEBIDOS
+----------------------------------------
+HTTP/2 200 
+date: Sat, 29 Mar 2025 00:53:04 GMT
+content-type: text/html; charset=UTF-8
+cache-control: no-store, no-cache, must-revalidate
+etag: W/"57dd0061f996256a1ad4e15da2f218c9"
+last-modified: Fri, 28 Mar 2025 12:24:53 GMT
+link: </hs/hsstatic/content-cwv-embed/static-1.1293/embed.js>; rel=preload; as=script,</hs/hsstatic/cos-i18n/static-1.53/bundles/project.js>; rel=preload; as=script
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+content-security-policy: default-src 'self'; object-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.hubspot.com cdn.jsdelivr.net platform.twitter.com static.addtoany.com cdn.socket.io cdn.datatables.net *.cloudfront.net *.airtable.com www.googleadservices.com bat.bing.com *.albacross.com www.youtube.com snap.licdn.com static.hotjar.com cdn.privacytools.com.br plugin.handtalk.me unpkg.com *.hubspot.net cdnjs.cloudflare.com www.gstatic.com script.hotjar.com www.google.com *.storylane.io try.abtasty.com code.jquery.com googleads.g.doubleclick.net www.google-analytics.com www.clarity.ms ajax.googleapis.com cdn.cookielaw.org *.facebook.net js.hs-analytics.net js.hs-banner.com js.hsadspixel.net js.hscollectedforms.net js.hsforms.net js.hsleadflows.net js.hubspot.com app.hubspot.com js.usemessages.com *.linkedin.com static.hsappstatic.net www.googletagmanager.com www.gupy.io sibforms.com; style-src 'self' 'unsafe-inline' *.gupy.io *.hubspot.com *.hsappstatic.net *.hubspot.net cdn-uicons.flaticon.com kit.fontawesome.com cdn.jsdelivr.net cdnjs.cloudflare.com cdn.datatable.net cdn.datatables.net stackpath.bootstrapcdn.com cdn.cookielaw.org *.hubspotusercontent-na1.net *.hubspotusercontent40.net fonts.googleapis.com cdn.privacytools.com.br www.gupy.io sibforms.com; img-src 'self' blob: 3299491.fs1.hubspotusercontent-na1.net perf-na1.hsforms.com track.hubspot.com www.gupy.io data: *; font-src 'self' fonts.gstatic.com *.hubspotusercontent-na1.net *.hubspotusercontent40.net www.gupy.io assets.sendinblue.com; connect-src 'self' blob: fs1.hubspotusercontent-na1.net cdn.cookielaw.org *.gupy.io data: gap: *; media-src 'self' *.hubspot.com *.hubspotusercontent-na1.net www.gupy.io; frame-src gupy.com.br *.gupy.com.br gupy.com.br/ gupy.io *.hs-sites.com *.hubspot.com www.googletagmanager.com lottie.host platform.twitter.com www.figma.com marine-bebop-445118-a6.uc.r.appspot.com w.soundcloud.com *.sibforms.com static.addtoany.com www.youtube.com app.hubspot.com *.hubspotvideo.com td.doubleclick.net *.facebook.com forms.hsforms.com *.storylane.io airtable.com *.spotify.com gupy.chat.blip.ai gupy673.outgrow.us *.google.com anchor.fm; frame-ancestors 'self' gupy.com.br gupy.io;; upgrade-insecure-requests
+edge-cache-tag: CT-36825585160,P-3299491,CW-107686588304,CW-118514172846,CW-120038248706,CW-136800929681,CW-139381873178,CW-163888635449,CW-171127177584,CW-171261468744,CW-171376797867,CW-171512835741,CW-171515610209,CW-171515610422,CW-171515610483,CW-171516124510,CW-172617223776,CW-174002560349,CW-180166468999,DB-18754189,DB-18754190,DB-18772795,E-107730622042,E-120038248708,E-120038248709,E-120237872129,E-136800929683,E-136800929684,E-139381873179,E-156899023276,E-171127177572,E-171127177588,E-171127177589,E-171127177590,E-171127177591,E-171128527287,E-171129052591,E-171129159968,E-171376797869,E-171376797870,E-171512835743,E-171515300418,E-172651791013,E-172659927216,E-173069119317,E-174304709297,E-174308203281,E-174312648589,E-174312648965,E-175712839805,E-177663283538,E-179570273586,E-184085734719,E-185149252393,E-185410500497,E-186040605986,E-95855015090,E-95855358082,RA-171875580601,RA-171876195999,RA-171876196000,RA-171876196001,RA-171876196002,RA-171876196003,RA-171876196004,RA-171876668939,RA-171876668940,RA-171876937516,RA-171876937517,RA-171876937518,RA-171876937519,RA-171876937520,RA-171878028809,RA-173151671200,RA-173882984121,RA-173882984192,RA-173884065904,RA-173884345977,RA-173891779421,RA-175716446301,RA-176707893649,RA-184992884244,PGS-ALL,SW-4,GC-120046995244,GC-171403820904,GC-175311160485
+permissions-policy: accelerometer=(), autoplay=(self), battery=(), camera=(self), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(self), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), usb=(), web-share=(), xr-spatial-tracking=(), clipboard-read=(self), clipboard-write=(self), gamepad=(), speaker-selection=(), conversion-measurement=(), focus-without-user-activation=(), hid=(), idle-detection=(), interest-cohort=(), serial=(), sync-script=(self), trust-token-redemption=(self), window-placement=(self), vertical-scroll=(self)
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: sameorigin
+x-hs-cache-config: BrowserCache-5s-EdgeCache-0s
+x-hs-cache-control: s-maxage=10800, max-age=0
+x-hs-cf-cache-status: HIT
+x-hs-content-campaign-id: 4f7f82dc-56d0-4da1-b2b6-cf2534d9a85c
+x-hs-content-id: 36825585160
+x-hs-hub-id: 3299491
+x-hs-prerendered: Fri, 28 Mar 2025 12:24:53 GMT
+x-xss-protection: 1; mode=block
+set-cookie: __cf_bm=capYnKKkU9dFvPHuAsi6__UYyxZYAMjbiZuGT6QvAKc-1743209584-1.0.1.1-EJFR68pTlvSx8dEMIp7GkCF8rnIwMJuHBG7Cl.7POeC4PDW0U4oJZInrNyRJuPM0sK1cTCvK44jVvm3yPm_qw6gVYSw7g0g2kescUYRDcdI; path=/; expires=Sat, 29-Mar-25 01:23:04 GMT; domain=.www.gupy.io; HttpOnly; Secure; SameSite=None
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=nZT0esidrXNh3NhBA%2Bn98%2F1zLrUtvQ%2Foebgz94RJM22O%2FZKC8C9BObO4wWaKsW4Zj7u6V6gdjRVDfy8nvcV2tlg9C1zR5Wy4QnVuTBJSc%2Fc07Z9m0H2atNZLEkMy7vd8RZ79mR5dgjqI"}],"group":"cf-nel","max_age":604800}
+nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+vary: Accept-Encoding
+set-cookie: _cfuvid=0Fug8QoCF5TTymKiU5WkD3o7m3_PZVCCr_bIqYGeCsE-1743209584420-0.0.1.1-604800000; path=/; domain=.www.gupy.io; HttpOnly; Secure; SameSite=None
+server: cloudflare
+cf-ray: 927b635e5ee69892-GIG
+content-encoding: br
+alt-svc: h3=":443"; ma=86400
+
+
+
+2. ANÁLISE DETALHADA DE SEGURANÇA
+----------------------------------------
+[Status HTTP] HTTP/2 200
+► Estado: Inseguro
+
+[Strict-Transport-Security (HSTS)]
+► Estado: Parcialmente seguro (Sem proteção de subdomínios)
+► Valor: max-age=31536000; includeSubDomains; preload
+
+[Content-Security-Policy]
+► Estado: Seguro (Previne conteúdo misto)
+► Valor: default-src 'self'; object-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.hubspot.com cdn.jsdelivr.net platform.twitter.com static.addtoany.com cdn.socket.io cdn.datatables.net *.cloudfront.net *.airtable.com www.googleadservices.com bat.bing.com *.albacross.com www.youtube.com snap.licdn.com static.hotjar.com cdn.privacytools.com.br plugin.handtalk.me unpkg.com *.hubspot.net cdnjs.cloudflare.com www.gstatic.com script.hotjar.com www.google.com *.storylane.io try.abtasty.com code.jquery.com googleads.g.doubleclick.net www.google-analytics.com www.clarity.ms ajax.googleapis.com cdn.cookielaw.org *.facebook.net js.hs-analytics.net js.hs-banner.com js.hsadspixel.net js.hscollectedforms.net js.hsforms.net js.hsleadflows.net js.hubspot.com app.hubspot.com js.usemessages.com *.linkedin.com static.hsappstatic.net www.googletagmanager.com www.gupy.io sibforms.com; style-src 'self' 'unsafe-inline' *.gupy.io *.hubspot.com *.hsappstatic.net *.hubspot.net cdn-uicons.flaticon.com kit.fontawesome.com cdn.jsdelivr.net cdnjs.cloudflare.com cdn.datatable.net cdn.datatables.net stackpath.bootstrapcdn.com cdn.cookielaw.org *.hubspotusercontent-na1.net *.hubspotusercontent40.net fonts.googleapis.com cdn.privacytools.com.br www.gupy.io sibforms.com; img-src 'self' blob: 3299491.fs1.hubspotusercontent-na1.net perf-na1.hsforms.com track.hubspot.com www.gupy.io data: *; font-src 'self' fonts.gstatic.com *.hubspotusercontent-na1.net *.hubspotusercontent40.net www.gupy.io assets.sendinblue.com; connect-src 'self' blob: fs1.hubspotusercontent-na1.net cdn.cookielaw.org *.gupy.io data: gap: *; media-src 'self' *.hubspot.com *.hubspotusercontent-na1.net www.gupy.io; frame-src gupy.com.br *.gupy.com.br gupy.com.br/ gupy.io *.hs-sites.com *.hubspot.com www.googletagmanager.com lottie.host platform.twitter.com www.figma.com marine-bebop-445118-a6.uc.r.appspot.com w.soundcloud.com *.sibforms.com static.addtoany.com www.youtube.com app.hubspot.com *.hubspotvideo.com td.doubleclick.net *.facebook.com forms.hsforms.com *.storylane.io airtable.com *.spotify.com gupy.chat.blip.ai gupy673.outgrow.us *.google.com anchor.fm; frame-ancestors 'self' gupy.com.br gupy.io;; upgrade-insecure-requests
+
+[Permissions-Policy]
+► Estado: Parcialmente seguro (Verificar configurações)
+► Valor: accelerometer=(), autoplay=(self), battery=(), camera=(self), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(self), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), usb=(), web-share=(), xr-spatial-tracking=(), clipboard-read=(self), clipboard-write=(self), gamepad=(), speaker-selection=(), conversion-measurement=(), focus-without-user-activation=(), hid=(), idle-detection=(), interest-cohort=(), serial=(), sync-script=(self), trust-token-redemption=(self), window-placement=(self), vertical-scroll=(self)
+
+[Referrer-Policy]
+► Estado: Seguro (Previne vazamento de informação)
+► Valor: strict-origin-when-cross-origin
+
+[X-Content-Type-Options]
+► Estado: Seguro (Previne MIME sniffing)
+► Valor: nosniff
+
+[X-XSS-Protection]
+► Estado: Seguro (Proteção XSS ativada)
+► Valor: 1; mode=block
+
+
+3. CABEÇALHOS DE SEGURANÇA NÃO ENCONTRADOS
+----------------------------------------
+▪ Status HTTP (301 Moved Permanently)
+▪ Location (HTTPS)
+▪ Permissions-Policy
+▪ Clear-Site-Data
+▪ Cross-Origin-Opener-Policy (COOP)
+▪ Cross-Origin-Resource-Policy (CORP)
+▪ Cross-Origin-Embedder-Policy (COEP)
+
+4. PONTUAÇÃO DE SEGURANÇA
+----------------------------------------
+► Pontuação: 5/13 (38.5%)
+► Conclusão: PROTEÇÕES BÁSICAS, COM VULNERABILIDADES
+► Recomendação: Implementar os cabeçalhos de segurança ausentes.
+================================================================================
+
